@@ -37,18 +37,18 @@ disableKinds = ["section", "taxonomy", "term"]
         [server.headers.values]
             Referrer-Policy = 'strict-origin-when-cross-origin'
 
-#[module]
-#    [[module.mounts]]
-#        source = "assets"
-#        target = "assets"
-#    [[module.mounts]]
-#        source = "layouts"
-#        target = "layouts"
-#    [[module.mounts]]
-#        source = "content"
-#        target = "content"
-#    [[module.mounts]]
-#        source = "static"
-#        target = "static"
-#    [[module.imports]]
-#        path = "github.com/bep/gallerydeluxe"
+[module]
+    [[module.mounts]]
+        source = "assets"
+        target = "assets"
+    [[module.mounts]]
+        source = "layouts"
+        target = "layouts"
+    [[module.mounts]]
+        source = "content"
+        target = "content"
+    [[module.mounts]]
+        source = "static"
+        target = "static"
+    [[module.imports]]
+        path = "github.com/Sped0n/gallerydeluxe"
