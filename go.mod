@@ -1,4 +1,4 @@
-module github.com/Sped0n/gallerydeluxe_starter
+module github.com/Sped0n/arc
 
 go 1.19
 
