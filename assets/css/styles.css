@@ -57,37 +57,6 @@ body {
     font-family: "nkg", serif;
 }
 
-/*#resp-table {*/
-/*    width: 100%;*/
-/*    display: table;*/
-/*}*/
-
-/*#resp-table-header {*/
-/*    display: table-header-group;*/
-/*    font-size: 20px;*/
-/*}*/
-
-/*.table-header-cell {*/
-/*    display: table-cell;*/
-/*    padding: 10px 10px 10px 0;*/
-/*    text-align: left;*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    bottom: 0;*/
-/*}*/
-
-/*#resp-table-body {*/
-/*    display: table-row-group;*/
-/*}*/
-
-/*.resp-table-row {*/
-/*    display: table-row;*/
-/*}*/
-
-/*.table-body-cell {*/
-/*    display: table-cell;*/
-/*    text-align: center;*/
-/*}*/
 #date-container {
     margin-top: 14px;
     width: 165px;
