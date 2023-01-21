@@ -1,10 +1,12 @@
-baseURL      = "https://www.example.com/"
-title        = "Gallery Deluxe"
+baseURL      = "https://arc.sped0nwen.com/"
+title        = "Archive"
 disableKinds = ["section", "taxonomy", "term"]
 
 [params]
     # Set to enable Plausible Analytics.
     plausible_domain = ""
+    # Set to enable CloudFlare Web Analytics
+    cf_analytics_token = ""
 
     [params.gallerydeluxe]
         # Shuffle the images in the gallery to give the impression of a new gallery each page load.
@@ -29,7 +31,7 @@ disableKinds = ["section", "taxonomy", "term"]
     [imaging.exif]
         disableDate    = false
         disableLatLong = true
-        includeFields  = 'Artist|LensModel|FNumber|ExposureTime'
+        includeFields  = 'Artist|Model|LensModel|FNumber|ExposureTime'
 
 [server]
     [[server.headers]]
