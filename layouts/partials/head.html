@@ -3,6 +3,7 @@
 {{ if hugo.IsProduction}}
     {{ $css = $css | minify | fingerprint }}
 {{ end }}
+<link rel="preload" href="/fonts/nkg.woff2" as="font" type="font/woff2">
 <link rel="stylesheet" href="{{ $css.RelPermalink }}"></link>
 {{ with site.Params.plausible_domain }}
 <script defer data-domain="{{ . }}" src="https://plausible.io/js/plausible.js"></script>
