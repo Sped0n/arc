@@ -88,4 +88,30 @@ body {
     padding: 0 2px;
 }
 
+.poweredByDesktop {
+    display: block;
+    margin-top: 25px;
+    color: #6d6d6d;
+    font-family: "nkg", serif;
+    text-align: center;
+    font-size: 20px;
+}
 
+
+@media screen and (max-width: 740px) {
+    .poweredByDesktop {
+        display: none;
+    }
+}
+
+a:hover, a:active {
+    color: #55a0f6;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:visited, a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: underline;
+}
