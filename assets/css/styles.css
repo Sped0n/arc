@@ -53,6 +53,7 @@ body {
 
 .date-display {
     position: fixed;
+    top: 0;
     right: 0.7%;
     color: black;
     font-family: "nkg", serif;
