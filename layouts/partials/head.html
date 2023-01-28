@@ -9,7 +9,6 @@
 <script defer data-domain="{{ . }}" src={{ with site.Params.plausible_self_deploy_snip_url
         }} "{{ . }}" {{ else }} "https://plausible.io/js/plausible.js" {{ end }}></script>
 {{ end }}
-{{ end }}
 {{ with site.Params.cf_analytics_token }}
 <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
         data-cf-beacon='{"token": "{{ . }}"}'></script>
