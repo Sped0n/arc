@@ -4,11 +4,11 @@ disableKinds = ["section", "taxonomy", "term"]
 
 [params]
     # Set to enable Plausible Analytics.
-    plausible_domain = ""
+    plausible_domain = "arc.sped0nwen.com"
     # Set to enable CloudFlare Web Analytics
     cf_analytics_token = ""
-    # Set to enable self Plausible Analytics. (content inside the tag src)
-    plausible_self_deploy_snip_url = ""
+    # Set to enable self deploy Plausible Analytics. (content inside the tag src)
+    plausible_self_deploy_snip_url = "https://pls.sped0nwen.com/js/script.js"
 
     [params.gallerydeluxe]
         # Shuffle the images in the gallery to give the impression of a new gallery each page load.
