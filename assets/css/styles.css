@@ -116,3 +116,32 @@ a:visited, a:link {
     background-color: transparent;
     text-decoration: underline;
 }
+
+#poweredBy {
+    position: absolute;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-delay: 0s;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    top:0;
+    margin-top: 27px;
+    height: 70px;
+}
+
+#hideInfo {
+    color: black;
+    position: absolute;
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-delay: 0.3s;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top:0;
+    margin-top: 27px;
+    height: 70px;
+}
