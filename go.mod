@@ -2,4 +2,4 @@ module github.com/Sped0n/arc
 
 go 1.19
 
-require github.com/Sped0n/gallerydeluxe v0.0.7 // indirect
+require github.com/Sped0n/gallerydeluxe v0.0.8 // indirect
