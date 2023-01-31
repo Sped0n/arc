@@ -28,7 +28,7 @@ disableKinds = ["section", "taxonomy", "term"]
 
 [imaging]
     resampleFilter = "CatmullRom"
-    quality        = 71
+    quality        = 70
     anchor         = "smart"
     [imaging.exif]
         disableDate    = false
