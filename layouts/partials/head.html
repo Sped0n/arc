@@ -1,16 +1,16 @@
 {{ $components := resources.Get "js/components.js" }}
 {{ $css := resources.Get "css/styles.css" }}
 {{ if hugo.IsProduction}}
-{{ $css = $css | minify | fingerprint }}
-{{ $components = $components | minify | fingerprint }}
+    {{ $css = $css | minify | fingerprint }}
+    {{ $components = $components | minify | fingerprint }}
 {{ end }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}"></link>
 <script src="{{ $components.RelPermalink }}" defer></script>
 {{ with site.Params.plausible_domain }}
-<script defer data-domain="{{ . }}" src={{ with site.Params.plausible_self_deploy_snip_url
-        }} "{{ . }}" {{ else }} "https://plausible.io/js/plausible.js"{{ end }}></script>
+    <script defer data-domain="{{ . }}" src={{ with site.Params.plausible_self_deploy_snip_url
+            }} "{{ . }}" {{ else }} "https://plausible.io/js/plausible.js"{{ end }}></script>
 {{ end }}
 {{ with site.Params.cf_analytics_token }}
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-        data-cf-beacon='{"token": "{{ . }}"}'></script>
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+            data-cf-beacon='{"token": "{{ . }}"}'></script>
 {{ end }}
