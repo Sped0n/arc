@@ -1,29 +1,32 @@
 let pby = document.getElementById("poweredBy");
 let hif = document.getElementById("hideInfo");
 
-pby.addEventListener(
-    "mouseover",
-    function () {
-        pby.style.transitionDelay = "0.3s";
-        hif.style.transitionDelay = "0s";
-        pby.style.opacity = "1";
-        hif.style.opacity = "0";
-    },
-    {passive: true}
-);
-pby.addEventListener(
-    "mouseout",
-    function () {
-        pby.style.transitionDelay = "0s";
-        hif.style.transitionDelay = "0.3s";
-        pby.style.opacity = "0";
-        hif.style.opacity = "1";
-    },
-    {passive: true}
-);
+function hoverAnimationInit() {
+    pby.addEventListener(
+        "mouseover",
+        function () {
+            pby.style.transitionDelay = "0.3s";
+            hif.style.transitionDelay = "0s";
+            pby.style.opacity = "1";
+            hif.style.opacity = "0";
+        },
+        {passive: true}
+    );
+    pby.addEventListener(
+        "mouseout",
+        function () {
+            pby.style.transitionDelay = "0s";
+            hif.style.transitionDelay = "0.3s";
+            pby.style.opacity = "0";
+            hif.style.opacity = "1";
+        },
+        {passive: true}
+    );
+}
+
 
 async function fetchWithTimeout(resource, options = {}) {
-    const { timeout = 8000 } = options;
+    const {timeout = 8000} = options;
 
     const controller = new AbortController();
     const id = setTimeout(() => controller.abort(), timeout);
@@ -43,7 +46,6 @@ async function loadMetric() {
         });
         return await response.json()
     } catch (error) {
-
         console.log(error.name === 'AbortError');
         return {"pageviews": "N/A"}
     }
@@ -51,4 +53,24 @@ async function loadMetric() {
 
 let counterContainer = document.querySelector(".website-counter");
 
-loadMetric().then(function(json) {counterContainer.innerHTML = json.pageviews;})
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function load_animation(json) {
+    hif.style.transitionDelay = "0s";
+    hif.style.opacity = "0"
+    await sleep(300);
+    counterContainer.innerHTML = json.pageviews;
+    hif.style.opacity = "1"
+    await sleep(300);
+    hif.style.transitionDelay = "0.3s";
+}
+
+
+counterContainer.innerHTML = "...";
+loadMetric().then(function (json) {
+    load_animation(json).then(function () {
+        hoverAnimationInit()
+    })
+})
