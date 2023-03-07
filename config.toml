@@ -1,6 +1,7 @@
 baseURL      = "https://arc.sped0nwen.com/"
 title        = "Archive"
 disableKinds = ["section", "taxonomy", "term"]
+timeout = 3000000
 
 [params]
     # Set to enable Plausible Analytics.
