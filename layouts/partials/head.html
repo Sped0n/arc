@@ -14,3 +14,9 @@
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
             data-cf-beacon='{"token": "{{ . }}"}'></script>
 {{ end }}
+{{ with site.Params.umami_domain }}
+    {{ $umami_domain := . }}
+    {{ with site.Params.umami_site_id }}
+      <script async src="https://{{ $umami_domain }}/script.js" data-website-id="{{ . }}"></script>
+    {{ end }}
+{{ end }}
